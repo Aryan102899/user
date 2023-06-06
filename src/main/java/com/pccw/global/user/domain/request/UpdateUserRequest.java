@@ -21,14 +21,14 @@ public class UpdateUserRequest {
     /**
      * 手机号
      */
-    @CheckMobile(message = "Required valid mobile")
+    @CheckMobile(message = "Required valid mobile", optional = true)
     @ApiModelProperty(value = "手机号")
     private String mobile;
 
     /**
      * 邮箱
      */
-    @CheckEmail(message = "Required valid email")
+    @CheckEmail(message = "Required valid email", optional = true)
     @ApiModelProperty(value = "邮箱")
     private String email;
 }

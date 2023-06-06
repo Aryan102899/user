@@ -39,7 +39,7 @@ public class UserService {
         return UserAdaptor.convertQueryUserResponse(user);
     }
 
-    public PageResponse<QueryUserResponse> list(QueryUserListRequest queryUserListRequest) {
+    public PageResponse<QueryUserResponse> search(QueryUserListRequest queryUserListRequest) {
         List<UserEntity> userEntities = userDao.queryUserEntityListByConditions(queryUserListRequest);
         List<QueryUserResponse> res = userEntities.stream().map(UserAdaptor::convertQueryUserResponse).collect(Collectors.toList());
         Long total = userDao.countUserEntityListByConditions(queryUserListRequest);

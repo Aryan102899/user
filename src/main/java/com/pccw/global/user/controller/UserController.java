@@ -43,10 +43,10 @@ public class UserController {
     }
 
     @ApiOperation("查询用户列表")
-    @RequestMapping(value = "/list", method = RequestMethod.POST)
+    @RequestMapping(value = "/search", method = RequestMethod.POST)
     @ResponseBody
-    public UserResponse list(@RequestBody @Valid QueryUserListRequest queryUserListRequest) {
-        PageResponse<QueryUserResponse> response = userService.list(queryUserListRequest);
+    public UserResponse search(@RequestBody @Valid QueryUserListRequest queryUserListRequest) {
+        PageResponse<QueryUserResponse> response = userService.search(queryUserListRequest);
         return UserResponse.createSuccessResponse(response);
     }
 
@@ -54,7 +54,7 @@ public class UserController {
     @ResponseBody
     @ApiOperation("删除用户")
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
-    public UserResponse disable(@PathVariable("id") Long id) {
+    public UserResponse delete(@PathVariable("id") Long id) {
         Long userId = userService.delete(id);
         return UserResponse.createSuccessResponse(userId);
     }
@@ -62,7 +62,7 @@ public class UserController {
     @ResponseBody
     @ApiOperation("更新用户")
     @RequestMapping(value = "/update", method = RequestMethod.PUT)
-    public UserResponse create(@RequestBody @Valid UpdateUserRequest updateUserRequest) {
+    public UserResponse update(@RequestBody @Valid UpdateUserRequest updateUserRequest) {
         Long userId = userService.update(updateUserRequest);
         return UserResponse.createSuccessResponse(userId);
     }
