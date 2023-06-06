@@ -4,7 +4,7 @@
 3. 检查脚本run.sh的执行权限
 4. 确保端口8080未被使用
 5. 执行shell脚本 ./run.sh
-6. 如果一切顺利，您可以通过url浏览接口文档:http://localhost:8080/swagger-ui/
+6. 您可以通过url浏览接口文档：http://localhost:8080/swagger-ui/
 7. 本项目用的是h2数据库，h2数据库查询url：http://localhost:8080/h2-console
 
 # User system requirements
@@ -13,7 +13,7 @@
 3. Check the execute permission of the script run.sh
 4. make sure port 8080 is not in use
 5. execute shell script ./run.sh
-6. if everything goes well, you can browse the restful api through url:http://localhost:8080/swagger-ui/
+6. you can browse the restful api through url:http://localhost:8080/swagger-ui/
 7. This project uses h2 database, h2 database query url: http://localhost:8080/h2-console
 
 
